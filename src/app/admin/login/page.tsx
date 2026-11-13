@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { Lock, Mail, ArrowRight, ShieldCheck, AlertCircle } from 'lucide-react';
 import { adminLogin } from '@/lib/api/client';
@@ -32,8 +33,15 @@ export default function AdminLoginPage() {
     <div className="min-h-screen flex items-center justify-center p-4">
       <div className="max-w-md w-full space-y-8">
         <div className="text-center space-y-3">
-          <div className="w-14 h-14 mx-auto rounded-2xl bg-gradient-to-tr from-[#2563EB] to-[#60A5FA] flex items-center justify-center text-white font-black text-xl shadow-xl shadow-blue-500/20">
-            CZ
+          <div className="relative w-16 h-16 mx-auto rounded-full overflow-hidden border-2 border-cyan-400/40 shadow-xl shadow-[#4263EB]/25">
+            <Image
+              src="/logo.png"
+              alt="CodiumZen IT Logo"
+              fill
+              priority
+              className="object-cover"
+              sizes="64px"
+            />
           </div>
           <h1 className="text-2xl font-black text-white tracking-tight">
             CodiumZen Management Portal

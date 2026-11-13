@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Mail, Phone, MapPin, Github, Linkedin, Facebook, ArrowUpRight, ShieldCheck } from 'lucide-react';
 import { SITE_CONFIG } from '@/config/site';
 import { COMPANY_INFO } from '@/config/company';
@@ -11,9 +12,15 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-white/5">
           {/* Brand & Mission */}
           <div className="lg:col-span-2 space-y-4">
-            <Link href="/" className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#4263EB] to-[#8B5CF6] flex items-center justify-center text-white font-black text-xl shadow-md">
-                CZ
+            <Link href="/" className="flex items-center gap-3 group">
+              <div className="relative w-11 h-11 rounded-full overflow-hidden border border-cyan-400/30 shadow-md shadow-[#4263EB]/25 group-hover:scale-105 group-hover:border-cyan-400/70 transition-all shrink-0">
+                <Image
+                  src="/logo.png"
+                  alt="CodiumZen IT Logo"
+                  fill
+                  className="object-cover"
+                  sizes="44px"
+                />
               </div>
               <span className="text-2xl font-black tracking-tight text-white">
                 CodiumZen <span className="text-[#60A5FA]">IT</span>

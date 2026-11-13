@@ -73,8 +73,8 @@ export async function fetchProducts(): Promise<Product[]> {
   // Default fallback data matching official products
   return [
     {
-      name: 'IVAC Assistant',
-      slug: 'ivac-assistant',
+      name: 'IVAC Assistant Pro',
+      slug: 'ivac-assistant-pro',
       tagline: 'High-speed automated visa appointment & telemetry suite',
       description: 'An advanced browser extension and cloud telemetry suite engineered for rapid slot detection, automated form-filling, anti-block proxying, and instant OTP synchronization for Indian Visa Application Centers (IVAC).',
       category: 'Automation & Productivity',

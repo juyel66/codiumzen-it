@@ -22,18 +22,34 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: 'Md Juyel Rana', url: 'https://github.com/juyel66' }],
   creator: 'CodiumZen IT',
+  icons: {
+    icon: [
+      { url: '/logo.png', type: 'image/png' }
+    ],
+    shortcut: '/logo.png',
+    apple: '/logo.png'
+  },
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: 'https://codiumzenit.com',
     title: 'CodiumZen IT — Building Digital Products. Engineering Intelligent Solutions.',
     description: 'We build innovative software products and scalable digital solutions that help businesses transform ideas into powerful technology.',
-    siteName: 'CodiumZen IT'
+    siteName: 'CodiumZen IT',
+    images: [
+      {
+        url: '/logo.png',
+        width: 1024,
+        height: 1024,
+        alt: 'CodiumZen IT Official Logo'
+      }
+    ]
   },
   twitter: {
     card: 'summary_large_image',
     title: 'CodiumZen IT — Building Digital Products',
-    description: 'Software engineering, scalable digital products, and intelligent automation systems.'
+    description: 'Software engineering, scalable digital products, and intelligent automation systems.',
+    images: ['/logo.png']
   },
   robots: {
     index: true,
@@ -63,6 +79,8 @@ export default function RootLayout({
         name: COMPANY_INFO.name,
         legalName: COMPANY_INFO.legalName,
         url: COMPANY_INFO.website,
+        logo: 'https://codiumzenit.com/logo.png',
+        image: 'https://codiumzenit.com/logo.png',
         email: COMPANY_INFO.officialEmail,
         telephone: COMPANY_INFO.phone,
         sameAs: [

@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname, useRouter } from 'next/navigation';
 import {
   LayoutDashboard,
@@ -85,9 +86,15 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
     <div className="min-h-screen bg-[#070B14] text-slate-100 flex flex-col md:flex-row">
       {/* Mobile Top Header */}
       <div className="md:hidden flex items-center justify-between p-4 bg-slate-900/80 border-b border-white/10 sticky top-0 z-30 backdrop-blur-md">
-        <div className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-[#2563EB] to-[#60A5FA] flex items-center justify-center text-white font-black text-sm">
-            CZ
+        <div className="flex items-center gap-2.5">
+          <div className="relative w-8 h-8 rounded-full overflow-hidden border border-cyan-400/30 shrink-0 shadow-md">
+            <Image
+              src="/logo.png"
+              alt="CodiumZen IT Logo"
+              fill
+              className="object-cover"
+              sizes="32px"
+            />
           </div>
           <span className="font-bold text-white text-base">CodiumZen Admin</span>
         </div>
@@ -107,8 +114,14 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
       >
         <div className="p-5 border-b border-white/10 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-[#2563EB] to-[#60A5FA] flex items-center justify-center text-white font-black text-sm shadow-md shadow-blue-500/20">
-              CZ
+            <div className="relative w-9 h-9 rounded-full overflow-hidden border border-cyan-400/30 shadow-md shadow-blue-500/20 shrink-0">
+              <Image
+                src="/logo.png"
+                alt="CodiumZen IT Logo"
+                fill
+                className="object-cover"
+                sizes="36px"
+              />
             </div>
             <div>
               <div className="font-bold text-white text-sm tracking-wide">CodiumZen IT</div>

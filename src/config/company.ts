@@ -4,6 +4,7 @@ export const COMPANY_INFO = {
   tagline: 'Building Digital Products. Engineering Intelligent Solutions.',
   description: 'We build innovative software products and scalable digital solutions that help businesses transform ideas into powerful technology.',
   website: 'https://codiumzenit.com',
+  logo: '/logo.png',
   officialEmail: 'codiumzenit@gmail.com',
   email: 'codiumzenit@gmail.com',
   supportEmail: 'codiumzenit@gmail.com',

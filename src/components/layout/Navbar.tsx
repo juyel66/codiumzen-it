@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { Menu, X, ArrowRight, Shield, Sparkles } from 'lucide-react';
 import { SITE_CONFIG } from '@/config/site';
@@ -37,8 +38,15 @@ export default function Navbar() {
         <div className="flex items-center justify-between">
           {/* Brand Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#4263EB] to-[#8B5CF6] flex items-center justify-center text-white font-black text-xl shadow-md shadow-[#4263EB]/30 group-hover:scale-105 transition-transform">
-              CZ
+            <div className="relative w-10 h-10 rounded-full overflow-hidden border border-cyan-400/30 shadow-md shadow-[#4263EB]/25 group-hover:scale-105 group-hover:border-cyan-400/70 transition-all shrink-0">
+              <Image
+                src="/logo.png"
+                alt="CodiumZen IT Logo"
+                fill
+                priority
+                className="object-cover"
+                sizes="40px"
+              />
             </div>
             <div>
               <span className="text-xl font-black tracking-tight text-white flex items-center gap-1.5">
